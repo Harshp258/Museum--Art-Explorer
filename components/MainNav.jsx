@@ -20,6 +20,7 @@ export default function MainNav() {
   const navStyle = {
     fontFamily: "'Playfair Display', serif", 
     textDecoration: "none",
+    color : "black"
   };
 
   const router = useRouter();
@@ -54,8 +55,8 @@ export default function MainNav() {
       <Navbar expand="lg" className="bg-body-tertiary" style={{ marginBottom: '0' }} expanded={isExpanded}>
         <Container style={{ marginBottom: '0' }}>
           <Navbar.Brand>
-            <Link href="/" style={navStyle} passHref legacyBehavior>
-              <Navbar.Brand>Harsh Patel Art Collection</Navbar.Brand>
+            <Link href="/"  passHref legacyBehavior>
+              <Navbar.Brand style={navStyle}>Harsh Patel Art Collection</Navbar.Brand>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setIsExpanded((e) => !e)}/>

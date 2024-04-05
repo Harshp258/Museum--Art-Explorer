@@ -4,8 +4,7 @@ import { Container } from 'react-bootstrap';
 
 
 const layoutStyle = {
-  backgroundImage: 'url("https://png.pngtree.com/background/20231030/original/pngtree-minimalist-space-with-white-frame-a-modern-art-exhibit-3d-render-picture-image_5783261.jpg")',
- 
+  backgroundImage: 'url("https://media.istockphoto.com/id/907456004/photo/abstract-blur-defocus-background-of-art-gallery-museum-or-showroom.jpg?s=612x612&w=0&k=20&c=jvFoWPXMuS2nj0ojCCVTotpG_HZpa7IbSn3Ia2jR1Xk=")',
   backgroundSize: '100% 100%',
   backgroundPosition: 'center',
   minHeight: '100vh',

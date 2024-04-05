@@ -19,9 +19,10 @@ export default function Home() {
   };
 
   return (
-    <Row className="mt-5">
+    <Row className >
       <Col md={6}>
         <div style={containerStyle}>
+          <br />
           <Image
             src="https://upload.wikimedia.org/wikipedia/commons/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg"
             alt="Metropolitan Museum of Art"
@@ -32,6 +33,7 @@ export default function Home() {
       </Col>
       <Col md={6}>
         <div style={containerStyle}>
+          <br />
           <p style={{ color: 'black', fontWeight: 'bold' }}>
             The Metropolitan Museum of Art is one of the world&apos;s largest and finest art museums.
             It is located on the eastern edge of Central Park in New York City.
