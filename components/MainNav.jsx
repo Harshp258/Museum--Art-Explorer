@@ -20,7 +20,7 @@ export default function MainNav() {
   const navStyle = {
     fontFamily: "'Playfair Display', serif", 
     textDecoration: "none",
-    color : "black"
+   
   };
 
   const router = useRouter();

@@ -1,5 +1,5 @@
 import { getToken } from "./authenticate";
-// Function to make authenticated fetch requests
+
 async function authenticatedFetch(url, method, data = null) {
   const token = getToken();
   const headers = {
