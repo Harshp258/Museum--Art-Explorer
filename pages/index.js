@@ -1,12 +1,12 @@
 /*********************************************************************************
-*  WEB422 – Assignment 5
+*  WEB422 – Assignment 6
 *
 *  I declare that this assignment is my own work in accordance with Seneca's
 *  Academic Integrity Policy:
 * 
 *  https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
 * 
-*  Name: Harsh Patel Student ID: 114085228 Date: 19/03/2024
+*  Name: Harsh Patel Student ID: 114085228 Date: 05/04/2024
 *
 ********************************************************************************/
 import { Row, Col, Image } from 'react-bootstrap';

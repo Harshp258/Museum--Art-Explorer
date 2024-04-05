@@ -3,14 +3,14 @@ import { Form, Row, Col, Button } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useAtom } from 'jotai';
 import { searchHistoryAtom } from '../store';
-import { addToHistory } from '@/lib/userData'; // Import addToHistory function
+import { addToHistory } from '@/lib/userData'; 
 
 export default function AdvancedSearch() {
   const [searchHistory, setSearchHistory] = useAtom(searchHistoryAtom);
   const router = useRouter();
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const submitForm = async (data) => { // Make submitForm function asynchronous
+  const submitForm = async (data) => { 
     let queryString = "searchBy=true";
 
     if (data.geoLocation) {
@@ -25,7 +25,7 @@ export default function AdvancedSearch() {
     queryString += `&isHighlight=${data.isHighlight}`;
     queryString += `&q=${data.q}`;
 
-    await addToHistory(queryString); // Add search query to history using addToHistory function
+    await addToHistory(queryString); 
 
     setSearchHistory(current => [...current, queryString]);
 

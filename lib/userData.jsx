@@ -26,37 +26,33 @@ async function authenticatedFetch(url, method, data = null) {
   }
 }
 
-// Function to add to favourites
 async function addToFavourites(id) {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/favourites/${id}`;
   return authenticatedFetch(url, 'PUT');
 }
 
-// Function to remove from favourites
 async function removeFromFavourites(id) {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/favourites/${id}`;
   return authenticatedFetch(url, 'DELETE');
 }
 
-// Function to get favourites
+
 async function getFavourites() {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/favourites`;
   return authenticatedFetch(url, 'GET');
 }
 
-// Function to add to history
+
 async function addToHistory(id) {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/history/${id}`;
   return authenticatedFetch(url, 'PUT');
 }
 
-// Function to remove from history
 async function removeFromHistory(id) {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/history/${id}`;
   return authenticatedFetch(url, 'DELETE');
 }
 
-// Function to get history
 async function getHistory() {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/history`;
   return authenticatedFetch(url, 'GET');

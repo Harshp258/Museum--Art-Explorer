@@ -4,13 +4,13 @@ import { useRouter } from 'next/router';
 import { Card, ListGroup, Button } from 'react-bootstrap';
 import styles from '@/styles/History.module.css';
 import React from 'react';
-import { removeFromHistory } from '@/lib/userData'; // Import removeFromHistory function
+import { removeFromHistory } from '@/lib/userData'; 
 
 export default function History() {
     const [searchHistory, setSearchHistory] = useAtom(searchHistoryAtom);
     const router = useRouter();
 
-    if (!searchHistory) return null; // Check if searchHistory is empty and return null if true
+    if (!searchHistory) return null; 
 
     let parsedHistory = [];
     searchHistory.forEach(h => {
@@ -24,9 +24,9 @@ export default function History() {
         router.push(`/artwork?${searchHistory[index]}`);
     };
 
-    const removeHistoryClicked = async (e, index) => { // Make removeHistoryClicked function asynchronous
+    const removeHistoryClicked = async (e, index) => {
         e.stopPropagation();
-        setSearchHistory(await removeFromHistory(searchHistory[index])); // Remove history item using removeFromHistory function
+        setSearchHistory(await removeFromHistory(searchHistory[index])); 
     };
 
     return (

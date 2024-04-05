@@ -1,6 +1,5 @@
 
 import axios from 'axios';
-import React from 'react';
 import jwt_decode from "jwt-decode";
 
 function setToken(token) {
@@ -33,7 +32,6 @@ export function isAuthenticated() {
   return token ? true : false;
 }
 
-// Function to authenticate user
 export async function authenticateUser(user, password) {
   try {
     const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/login`, {
@@ -49,7 +47,6 @@ export async function authenticateUser(user, password) {
   }
 }
 
-// Function to register user
 export async function registerUser(user, password, password2) {
   try {
     const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/register`, {

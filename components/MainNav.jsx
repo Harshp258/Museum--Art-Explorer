@@ -25,14 +25,14 @@ export default function MainNav() {
 
   const router = useRouter();
 
-  const handleSubmit = async (event) => { // Make handleSubmit function asynchronous
+  const handleSubmit = async (event) => { 
     event.preventDefault();
 
     const searchField = event.target.elements.searchField.value;
 
     const queryString = `title=true&q=${searchField}`;
     setSearchHistory(current => [...current, queryString]);
-    await addToHistory(queryString); // Add search query to history using addToHistory function
+    await addToHistory(queryString); 
     router.push(`/artwork?title=true&q=${searchField}`);
 
     setIsExpanded(false);
@@ -42,11 +42,11 @@ export default function MainNav() {
 
   const logout = () => {
     setIsExpanded(false);
-    removeToken(); // Remove token from localStorage
-    router.push('/login'); // Redirect to login page
+    removeToken(); 
+    router.push('/login'); 
   };
 
-  // Check if user is logged in
+
   const token = readToken();
   const isLoggedIn = !!token;
 
