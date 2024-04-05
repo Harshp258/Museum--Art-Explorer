@@ -33,7 +33,9 @@ export default function AdvancedSearch() {
   };
 
   return (
-    <Row className="justify-content-md-center mt-5">
+    <>
+    <Container>
+    <Row className="justify-content-md-center">
       <Col md={6}>
         <Form onSubmit={handleSubmit(submitForm)}>
           <Form.Group className="mb-3">
@@ -73,5 +75,7 @@ export default function AdvancedSearch() {
         </Form>
       </Col>
     </Row>
+    </Container>
+    </>
   );
 }
