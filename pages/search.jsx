@@ -32,11 +32,18 @@ export default function AdvancedSearch() {
     router.push(`/artwork?${queryString}`);
   };
 
+  const containerStyle = {
+    background: 'rgba(169, 169, 169, 0.5)', 
+    padding: '20px', 
+    borderRadius: '10px', 
+  };
+
   return (
     <>
-    <Card>
+    
     <Row className="justify-content-md-center">
       <Col md={6}>
+        <div style={containerStyle}> 
         <Form onSubmit={handleSubmit(submitForm)}>
           <Form.Group className="mb-3">
             <Form.Label className="fw-bold">Search By:</Form.Label>
@@ -73,9 +80,11 @@ export default function AdvancedSearch() {
 
           <Button type="submit">Submit</Button>
         </Form>
+        </div>
       </Col>
     </Row>
-    </Card>
+   
+    
     </>
   );
 }
