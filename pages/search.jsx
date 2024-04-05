@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Form, Row, Col, Button, Card } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useAtom } from 'jotai';
 import { searchHistoryAtom } from '../store';
@@ -34,7 +34,7 @@ export default function AdvancedSearch() {
 
   return (
     <>
-    <Container>
+    <Card>
     <Row className="justify-content-md-center">
       <Col md={6}>
         <Form onSubmit={handleSubmit(submitForm)}>
@@ -75,7 +75,7 @@ export default function AdvancedSearch() {
         </Form>
       </Col>
     </Row>
-    </Container>
+    </Card>
     </>
   );
 }
