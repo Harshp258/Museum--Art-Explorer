@@ -1,9 +1,9 @@
 import { Card, Form, Alert, Button } from "react-bootstrap";
 import { useState } from "react";
-import { authenticateUser } from "@/lib/authenticate";
-import { useRouter } from "next/router";
 import { useAtom } from "jotai";
+import { useRouter } from "next/router";
 import { favouritesAtom, searchHistoryAtom } from "@/store";
+import { authenticateUser } from "@/lib/authenticate";
 import { getFavourites, getHistory } from "@/lib/userData";
 
 export default function Login() {
@@ -38,32 +38,18 @@ export default function Login() {
         <Form onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Label>User:</Form.Label>
-          <Form.Control
-            type="text"
-            value={user}
-            id="userName"
-            name="userName"
-            onChange={(e) => setUser(e.target.value)}
-          />
+          <Form.Control type="text" value={user}  id="userName" name="userName" onChange={(e) => setUser(e.target.value)}/>
         </Form.Group>
         <Form.Group>
           <Form.Label>Password:</Form.Label>
-          <Form.Control
-            type="password"
-            value={password}
-            id="password"
-            name="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <Form.Control type="password" value={password} id="password" name="password" onChange={(e) => setPassword(e.target.value)} />
         </Form.Group>
         {warning && (
           <>
             <Alert variant="danger">{warning}</Alert>
           </>
         )}
-        <Button variant="primary" className="pull-right" type="submit">
-          Login
-        </Button>
+        <Button variant="primary" className="pull-right" type="submit"> Login </Button>
       </Form>
       </Card.Body>
       </Card>

@@ -2,9 +2,12 @@
 import axios from 'axios';
 import jwt_decode from "jwt-decode";
 
+
+
 function setToken(token) {
   localStorage.setItem("token", token);
 }
+
 
 export function getToken() {
   try {
@@ -13,6 +16,7 @@ export function getToken() {
     return null;
   }
 }
+
 
 export function removeToken() {
   localStorage.removeItem("token");
@@ -26,6 +30,7 @@ export function readToken() {
     return null;
   }
 }
+
 
 export function isAuthenticated() {
   const token = readToken();
@@ -46,6 +51,8 @@ export async function authenticateUser(user, password) {
     return false;
   }
 }
+
+
 
 export async function registerUser(user, password, password2) {
   try {

@@ -40,6 +40,8 @@ export default function Home() {
             The Met&apos;s mission is to collect, preserve, study, exhibit, and encourage appreciation for works of art
             that collectively represent the broad spectrum of human achievement and creativity.
           </p>
+
+          
           <p style={{ color: 'black', fontWeight: 'bold' }}>
             For more information, visit the Wikipedia entry:{' '}
             <a href="https://en.wikipedia.org/wiki/Metropolitan_Museum_of_Art" target="_blank" rel="noreferrer" style={{ color: 'blue' }}>
